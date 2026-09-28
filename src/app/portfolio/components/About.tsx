@@ -187,7 +187,13 @@ export default function About() {
   );
 }
 
-function InfoSlot({ label, children }) {
+function InfoSlot({
+  label,
+  children,
+}: {
+  label: string;
+  children: React.ReactNode;
+}) {
   return (
     <div className="rounded-xl border border-[#1C2318] bg-white/[0.02] p-5 transition-colors hover:border-[#7CFC00]/30">
       <div className="mb-3 flex items-center gap-2">
@@ -196,16 +202,35 @@ function InfoSlot({ label, children }) {
           {label}
         </span>
       </div>
+
       <p className="text-sm leading-7 text-white/45">{children}</p>
     </div>
   );
 }
 
 // Simplified Omnitrix hourglass mark
-function OmniMark({ className }) {
+function OmniMark({
+  className,
+}: {
+  className?: string;
+}) {
   return (
-    <svg viewBox="0 0 40 40" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="2" y="2" width="36" height="36" rx="10" stroke="currentColor" strokeWidth="2.5" />
+    <svg
+      viewBox="0 0 40 40"
+      className={className}
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect
+        x="2"
+        y="2"
+        width="36"
+        height="36"
+        rx="10"
+        stroke="currentColor"
+        strokeWidth="2.5"
+      />
+
       <path
         d="M13 12 L27 12 L20 20 L27 28 L13 28 L20 20 Z"
         fill="currentColor"
@@ -213,3 +238,4 @@ function OmniMark({ className }) {
     </svg>
   );
 }
+

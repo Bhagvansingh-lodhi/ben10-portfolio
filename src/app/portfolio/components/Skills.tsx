@@ -152,12 +152,31 @@ export default function Skills() {
   );
 }
 
-// Simplified Omnitrix hourglass mark — shared visual language with the About section
-function OmniMark({ className }) {
+function OmniMark({
+  className,
+}: {
+  className?: string;
+}) {
   return (
-    <svg viewBox="0 0 40 40" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="2" y="2" width="36" height="36" rx="10" stroke="currentColor" strokeWidth="2.5" />
-      <path d="M13 12 L27 12 L20 20 L27 28 L13 28 L20 20 Z" fill="currentColor" />
+    <svg
+      viewBox="0 0 40 40"
+      className={className}
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect
+        x="2"
+        y="2"
+        width="36"
+        height="36"
+        rx="10"
+        stroke="currentColor"
+        strokeWidth="2.5"
+      />
+      <path
+        d="M13 12 L27 12 L20 20 L27 28 L13 28 L20 20 Z"
+        fill="currentColor"
+      />
     </svg>
   );
 }
